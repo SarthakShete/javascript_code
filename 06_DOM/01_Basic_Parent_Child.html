@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> DOM</title>
+</head>
+<body style="background-color:#212121; color:white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1].innerHTML);
+
+    console.log(parent.firstElementChild)
+    console.log(parent.lastElementChild)
+
+    // Let see how children can access the Parent and sibling.
+    const dayOne = document.querySelector('.day');
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+
+    // it gives node but it include the Days (4) + next Line(5) = Length Of Node (9)....
+    console.log("Nodes : ",parent.ChilNodes);
+</script>
+</html>

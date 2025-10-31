@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121; color:white;">
+    
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = "main";
+    div.id = "myId";
+    div.setAttribute("title","New Div");
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+
+    // Both are doing same thingggg....
+    // This is 1st way : div.innerText = "hello programmers";
+    // This is the 2nd Way...
+    const addText = document.createTextNode("Hello Programmers");
+    div.appendChild(addText);
+
+    // The Div is inside the Memorty now it should appear on page 
+    document.body.appendChild(div);
+</script>
+</html>
