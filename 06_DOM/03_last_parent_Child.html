@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 </head>
-<body>
-    <div class="language">
-         <ul> 
+<body style="background-color:#212121; color:white;">
+    <div>
+         <ul class="language"> 
             <li> javascript</li>
          </ul>
     </div>
@@ -20,14 +20,31 @@
         document.querySelector('.language').appendChild(li);
     }
 
+    addLanguage("java");
+    addLanguage("pyhon");
+
+
     function add_Opti_lang(langName){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(langName));
         document.querySelector('.language').appendChild(li);
     }
 
+
     // Edit
-    const secondLanf = document.querySelector("li:nth-child(2)");
-    console.log(secondLanf);
+    const secondLang = document.querySelector("li:nth-child(2)");
+    
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo"; // This is another way to add Content..
+    secondLang.replaceWith(newLi);
+
+    // Edit 2 
+    const FirstLang = document.querySelector("li:first-child");
+    FirstLang.outerHTML = '<li>TypeScript</li>';
+
+    // Remove the Element...
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();   
+
 </script>
 </html>
